@@ -1,2 +1,1 @@
-# blog
-This is my blog!
+# Hi guys, welcome to my blog
