@@ -1,0 +1,18 @@
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --text-color: #333;
+    --primary-color: rgb(238, 77, 45);
+    --border-color: #ddbbdd;
+}
+
+* {
+    box-sizing: inherit; /*kế thừa box-sizng của html*/
+}
+
+html {
+    font-size: 62.5%; /*10px*/
+    line-height: 1.6rem;
+    font-family: "Nunito sans", sans-serif;
+    box-sizing: border-box;
+}

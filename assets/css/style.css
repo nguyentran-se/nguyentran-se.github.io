@@ -1,0 +1,154 @@
+body {
+    background-color: var(--white-color);
+}
+.header__navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.header__navbar-left a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.header__navbar-right {
+    display: flex;
+    list-style: none;
+    margin-right: 60px;
+    font-weight: 600;
+}
+
+.header__navbar-right a {
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin: 0 10px;
+}
+/* switch theme */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* top: 23px; */
+    right: 10px;
+    z-index: 1000;
+}
+/* phần khung  */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    width: 30px;
+}
+.theme-switch input {
+    display: none;
+}
+/* Phần ruột */
+.slider {
+    background-color: #cfcbcb;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.4s;
+}
+/* chấm tròn */
+.slider:before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    bottom: 2px;
+    left: 2px;
+    transition: 0.4s;
+}
+input:checked + .slider {
+    background-color: #271052;
+}
+input:checked + .slider:before {
+    transform: translateX(16px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+a {
+    position: relative;
+}
+
+.header__navbar a:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    bottom: -2px;
+    display: block;
+    left: 0;
+    position: absolute;
+    height: 2px;
+    background: #9b59b6;
+    transition: width 0.2s linear 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.header__navbar a:hover:after {
+    width: 75%;
+    left: 0;
+}
+
+a:hover {
+    color: #9b59b6;
+    transform: scale(1.1);
+}
+
+.header__navbar-left a {
+    font-size: 2rem;
+}
+/* darkmode */
+
+.darkMode {
+    --white-color: #292c35;
+    --text-color: #a9a9b3;
+}
+
+.darkMode a:hover {
+    color: #eeebf0;
+}
+
+.darkMode a:after {
+    background: white;
+}
+/* nav mobile */
+.nav-mobile {
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-mobile-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.icon-menu {
+    line-height: 2.4rem;
+    font-size: 2.4rem;
+    text-decoration: none;
+    display: none;
+    left: 30px;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+}

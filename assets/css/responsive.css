@@ -1,0 +1,43 @@
+/* mobile & tablet */
+@media (max-width: 63.9375em) {
+    .header__navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+    }
+    .header__navbar-left a {
+        font-size: 2.6rem;
+    }
+    .header__navbar-left a:after {
+        bottom: -4px;
+    }
+}
+/* tablet */
+@media (max-width: 63.9375em) and (min-width: 46.25em) {
+    .header__navbar-right {
+        margin-top: 15px;
+    }
+
+    .theme-switch-wrapper {
+        top: 36px;
+        right: 24px;
+    }
+}
+/* mobile */
+@media (max-width: 46.25em) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header__navbar {
+        margin-top: 0;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+    .icon-menu {
+        display: block;
+    }
+}
