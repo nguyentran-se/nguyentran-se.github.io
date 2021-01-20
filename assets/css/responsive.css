@@ -20,7 +20,7 @@
     }
 
     .theme-switch-wrapper {
-        top: 36px;
+        top: 38px;
         right: 24px;
     }
 }
@@ -38,6 +38,9 @@
         display: block;
     }
     .icon-menu {
+        display: block;
+    }
+    .change-theme {
         display: block;
     }
 }

@@ -1,3 +1,7 @@
+html,
+body {
+    height: 100%;
+}
 body {
     background-color: var(--white-color);
 }
@@ -96,7 +100,7 @@ a {
     left: 0;
     position: absolute;
     height: 2px;
-    background: #9b59b6;
+    background: var(--primary-color);
     transition: width 0.2s linear 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -106,7 +110,7 @@ a {
 }
 
 a:hover {
-    color: #9b59b6;
+    color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -124,31 +128,107 @@ a:hover {
     color: #eeebf0;
 }
 
-.darkMode a:after {
-    background: white;
+.darkMode .icon-menu:hover {
+    color: #eeebf0;
 }
+
+.darkMode .header__navbar a:after {
+    background-color: white;
+}
+.darkMode .nav-mobile {
+    background-color: #053c4b;
+}
+
+.darkMode .change-theme:hover {
+    color: #eeebf0;
+}
+
 /* nav mobile */
 .nav-mobile {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    width: 75%;
+    max-width: 100%;
+    background-color: #9ad8e7;
+    transform: translateX(-100%);
+    transition: transform linear 0.3s;
     display: none;
 }
 
 .nav-list {
     list-style: none;
+    padding: 0;
+    margin-left: 16px;
+    margin-top: 54px;
+}
+
+.nav-list li {
+    width: 80%;
 }
 
 .nav-mobile-link {
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.6rem;
+    display: block;
+    margin-top: 30px;
+    position: relative;
+}
+.nav-mobile-link:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--text-color);
+    top: 0;
+    left: -6px;
+    right: 0;
+    bottom: -6px;
+    width: 100%;
 }
 
 .icon-menu {
-    line-height: 2.4rem;
     font-size: 2.4rem;
     text-decoration: none;
     display: none;
-    left: 30px;
+    left: 6px;
     position: absolute;
-    top: 20px;
+    top: 3px;
     cursor: pointer;
+    color: var(--text-color);
+    padding: 14.5px;
+}
+.icon-menu:hover {
+    color: var(--primary-color);
+}
+
+.show-menu {
+    transform: translateX(0);
+    transition: transform linear 0.3s;
+}
+.hide-menu {
+    transform: translateX(-100%);
+    transition: transform linear 0.3s;
+}
+.icon-menu-cancel {
+    font-size: 2.8rem;
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    cursor: pointer;
+}
+.icon-menu-cancel:hover {
+    color: var(--primary-color);
+}
+.change-theme {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    font-size: 1.8rem;
+    display: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.change-theme:hover {
+    color: var(--primary-color);
 }
