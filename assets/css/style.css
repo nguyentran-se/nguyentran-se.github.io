@@ -18,13 +18,18 @@ body {
     color: var(--text-color);
     font-size: 1.6rem;
     font-weight: 600;
+    user-select: none;
 }
 
 .header__navbar-right {
+    --height-nav-right: 24px;
     display: flex;
     list-style: none;
     margin-right: 60px;
     font-weight: 600;
+    height: var(--height-nav-right);
+    line-height: var(--height-nav-right);
+    box-sizing: border-box;
 }
 
 .header__navbar-right a {
@@ -33,7 +38,14 @@ body {
     color: var(--text-color);
     font-size: 1.6rem;
     margin: 0 10px;
+    padding: 0 3px;
+    user-select: none;
 }
+
+.header__navbar-item {
+    box-sizing: border-box;
+}
+
 /* switch theme */
 .theme-switch-wrapper {
     display: flex;
@@ -95,7 +107,7 @@ a {
 .header__navbar a:after {
     background: none repeat scroll 0 0 transparent;
     content: "";
-    bottom: -2px;
+    bottom: 0px;
     display: block;
     left: 0;
     position: absolute;
@@ -107,6 +119,10 @@ a {
 .header__navbar a:hover:after {
     width: 75%;
     left: 0;
+}
+
+.header__navbar-right a:hover:after {
+    left: 4px;
 }
 
 a:hover {
@@ -122,6 +138,7 @@ a:hover {
 .darkMode {
     --white-color: #292c35;
     --text-color: #a9a9b3;
+    --active-color: #065064;
 }
 
 .darkMode a:hover {
@@ -231,4 +248,11 @@ a:hover {
 }
 .change-theme:hover {
     color: var(--primary-color);
+}
+
+.active {
+    background-color: var(--active-color);
+    pointer-events: none;
+    box-shadow: 1px 1px var(--primary-color);
+    border: 1px solid var(--primary-color);
 }

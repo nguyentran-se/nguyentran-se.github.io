@@ -32,3 +32,15 @@ modeBtn.addEventListener("click", () => {
         modeBtn.innerHTML = "Dark";
     }
 });
+// active nav-item color
+const navLinks = document.querySelectorAll(".header__navbar-right a");
+const navLinksArr = Array.from(navLinks);
+navLinksArr.forEach((navLink) => {
+    navLink.onclick = (e) => {
+        e.preventDefault();
+        var eleHasActive = document.getElementsByClassName("active");
+        if (eleHasActive.length != 0) eleHasActive[0].className = eleHasActive[0].className.replace("active", "");
+        navLink.classList.add("active");
+        navLink.parentElement.style.cursor = "pointer";
+    };
+});
