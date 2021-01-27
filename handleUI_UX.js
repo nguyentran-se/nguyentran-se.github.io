@@ -1,8 +1,17 @@
 // dark mode
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-toggleSwitch.addEventListener("change", () => {
-    document.body.classList.toggle("darkMode");
+toggleSwitch.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        document.body.classList.add("darkMode");
+        localStorage.setItem("theme", "darkMode");
+    } else {
+        document.body.classList.remove("darkMode");
+        localStorage.setItem("theme", "nothing");
+    }
 });
+const currentTheme = localStorage.getItem("theme");
+document.body.classList.add(currentTheme);
+if (currentTheme === "darkMode") toggleSwitch.checked = true;
 
 // nav_mobile event
 const menuBtn = document.querySelector(".icon-menu");
@@ -33,14 +42,21 @@ modeBtn.addEventListener("click", () => {
     }
 });
 // active nav-item color
-const navLinks = document.querySelectorAll(".header__navbar-right a");
-const navLinksArr = Array.from(navLinks);
-navLinksArr.forEach((navLink) => {
-    navLink.onclick = (e) => {
-        e.preventDefault();
-        var eleHasActive = document.getElementsByClassName("active");
-        if (eleHasActive.length != 0) eleHasActive[0].className = eleHasActive[0].className.replace("active", "");
-        navLink.classList.add("active");
-        navLink.parentElement.style.cursor = "pointer";
-    };
-});
+const liItemRights = document.getElementsByClassName("header__navbar-item");
+liItemsRightArr = Array.from(liItemRights);
+// var check = false;
+function handleActiveColor() {
+    liItemsRightArr.forEach((liItem) => {
+        liItem.onclick = (e) => {
+            // e.preventDefault();
+            // localStorage.setItem("activeItem", liItem.id);
+            liItemsRightArr.forEach((item) => {
+                item.classList.remove("active");
+            });
+            liItem.classList.add("active");
+            liItem.style.cursor = "pointer";
+            // check = true;
+        };
+    });
+}
+handleActiveColor();
