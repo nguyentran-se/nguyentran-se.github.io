@@ -156,7 +156,8 @@ a:hover {
     background-color: #053c4b;
 }
 
-.darkMode .change-theme:hover {
+.darkMode .change-theme:hover,
+.darkMode .icon-menu-cancel:hover {
     color: #eeebf0;
 }
 
