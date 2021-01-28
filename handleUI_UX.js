@@ -60,11 +60,11 @@ function handleActiveColor() {
 }
 handleActiveColor();
 var currentActiveItem = localStorage.getItem("activeItem");
-console.log(currentActiveItem);
+// console.log(currentActiveItem);
 if (currentActiveItem) {
     var elementAct = document.querySelector(`#${currentActiveItem}`);
     if (elementAct) {
-        console.log(elementAct);
+        // console.log(elementAct);
         elementAct.classList.add("active");
     }
 }
