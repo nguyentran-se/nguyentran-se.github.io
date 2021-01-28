@@ -41,7 +41,7 @@ modeBtn.addEventListener("click", () => {
         modeBtn.innerHTML = "Dark";
     }
 });
-// active nav-item color
+// **active nav-item color**
 const liItemRights = document.getElementsByClassName("header__navbar-item");
 liItemsRightArr = Array.from(liItemRights);
 // localStorage.setItem("activeItem", "nothing");
@@ -68,3 +68,12 @@ if (currentActiveItem) {
         elementAct.classList.add("active");
     }
 }
+
+let navRightItem = document.querySelector(".header__navbar-left");
+// console.log(navRightItem);
+navRightItem.onclick = (e) => {
+    liItemsRightArr.forEach((item) => {
+        item.classList.remove("active");
+    });
+    localStorage.setItem("activeItem", "nothing");
+};
