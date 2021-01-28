@@ -44,19 +44,27 @@ modeBtn.addEventListener("click", () => {
 // active nav-item color
 const liItemRights = document.getElementsByClassName("header__navbar-item");
 liItemsRightArr = Array.from(liItemRights);
-// var check = false;
+// localStorage.setItem("activeItem", "nothing");
 function handleActiveColor() {
     liItemsRightArr.forEach((liItem) => {
         liItem.onclick = (e) => {
             // e.preventDefault();
-            // localStorage.setItem("activeItem", liItem.id);
+            localStorage.setItem("activeItem", liItem.id);
             liItemsRightArr.forEach((item) => {
                 item.classList.remove("active");
             });
             liItem.classList.add("active");
             liItem.style.cursor = "pointer";
-            // check = true;
         };
     });
 }
 handleActiveColor();
+var currentActiveItem = localStorage.getItem("activeItem");
+console.log(currentActiveItem);
+if (currentActiveItem) {
+    var elementAct = document.querySelector(`#${currentActiveItem}`);
+    if (elementAct) {
+        console.log(elementAct);
+        elementAct.classList.add("active");
+    }
+}
