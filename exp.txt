@@ -1,0 +1,4 @@
+1. fix bug bottom 0;
+    -> cho thằng chứa cả layout position relative
+    -> cho thằng content (body) padding bottom = với height
+    của thằng footer.

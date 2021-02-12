@@ -43,4 +43,7 @@
     .change-theme {
         display: block;
     }
+    .about-introduction{
+        padding: 0 20px;
+    }
 }
