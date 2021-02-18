@@ -1,15 +1,13 @@
 html,
 body {
     height: 100%;
-    
 }
 body {
     background-color: var(--white-color);
 }
-.peppers-blog{
+.peppers-blog {
     min-height: 100vh;
     position: relative;
-    
 }
 .header__navbar {
     position: relative;
@@ -267,22 +265,21 @@ a:hover {
     /* pointer-events: none; */
 }
 /* body */
-.container{
+.container {
     padding-bottom: 4rem;
     font-size: 1.6rem;
     line-height: 24px;
     color: var(--text-color);
 }
 
-
 /* about page */
-.about-topic{
+.topic {
     text-align: center;
     margin-top: 30px;
     font-size: 3.2rem;
     color: #000000;
 }
-.about-introduction{
+.about-introduction {
 }
 
 /* footer */

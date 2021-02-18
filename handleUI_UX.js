@@ -44,30 +44,46 @@ modeBtn.addEventListener("click", () => {
 // **active nav-item color**
 const liItemRights = document.getElementsByClassName("header__navbar-item");
 liItemsRightArr = Array.from(liItemRights);
+//use localstorage để giữ tài nguyên khi load page
+
 // localStorage.setItem("activeItem", "nothing");
+// window.onload = () => {
+//     liItemsRightArr.forEach((liItem) => {
+//         liItem.classList.remove("active");
+//     });
+// };
 function handleActiveColor() {
+    // liItemsRightArr.forEach((liItem) => {
+    //     liItem.onclick = (e) => {
+    //         // e.preventDefault();
+    //         localStorage.setItem("activeItem", liItem.id);
+    //         liItemsRightArr.forEach((item) => {
+    //             item.classList.remove("active");
+    //         });
+    //         liItem.classList.add("active");
+    //         liItem.style.cursor = "pointer";
+    //     };
+    // });
+    var url = window.location.href;
     liItemsRightArr.forEach((liItem) => {
-        liItem.onclick = (e) => {
-            // e.preventDefault();
-            localStorage.setItem("activeItem", liItem.id);
-            liItemsRightArr.forEach((item) => {
-                item.classList.remove("active");
-            });
+        itemLink = liItem.querySelector("a");
+        if (url === itemLink.href + "/") {
             liItem.classList.add("active");
-            liItem.style.cursor = "pointer";
-        };
+        } else {
+            liItem.classList.remove("active");
+        }
     });
 }
 handleActiveColor();
-var currentActiveItem = localStorage.getItem("activeItem");
-// console.log(currentActiveItem);
-if (currentActiveItem) {
-    var elementAct = document.querySelector(`#${currentActiveItem}`);
-    if (elementAct) {
-        // console.log(elementAct);
-        elementAct.classList.add("active");
-    }
-}
+// var currentActiveItem = localStorage.getItem("activeItem");
+// // console.log(currentActiveItem);
+// if (currentActiveItem) {
+//     var elementAct = document.querySelector(`#${currentActiveItem}`);
+//     if (elementAct) {
+//         // console.log(elementAct);
+//         elementAct.classList.add("active");
+//     }
+// }
 
 let navRightItem = document.querySelector(".header__navbar-left");
 // console.log(navRightItem);
@@ -75,5 +91,5 @@ navRightItem.onclick = (e) => {
     liItemsRightArr.forEach((item) => {
         item.classList.remove("active");
     });
-    localStorage.setItem("activeItem", "nothing");
+    // localStorage.setItem("activeItem", "nothing");
 };
