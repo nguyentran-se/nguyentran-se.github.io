@@ -4,7 +4,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 16px;
     }
     .header__navbar-left a {
         font-size: 2.6rem;
@@ -15,6 +14,13 @@
 }
 /* tablet */
 @media (max-width: 63.9375em) and (min-width: 46.25em) {
+    .header {
+        padding-top: 0.1px;
+    }
+    .header__navbar {
+        /* padding-top: 16px; */
+        margin-top: 16px;
+    }
     .header__navbar-right {
         margin-top: 15px;
     }

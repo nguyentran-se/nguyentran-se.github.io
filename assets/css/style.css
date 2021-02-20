@@ -9,6 +9,9 @@ body {
     min-height: 100vh;
     position: relative;
 }
+.loader-wrapper {
+    background-color: #065064;
+}
 .header__navbar {
     position: relative;
     display: flex;
@@ -147,10 +150,10 @@ a:hover {
     -webkit-animation: fadeIn linear 0.3s;
 }
 .lightMode {
-    animation: fadeOut ease-out 0.3s;
-    -webkit-animation: fadeOut ease-out 0.3s;
+    animation: fadeInLight ease-in 0.3s;
+    -webkit-animation: fadeInLight ease-in 0.3s;
 }
-@keyframes fadeOut {
+@keyframes fadeInLight {
     from {
         opacity: 0;
     }
@@ -301,7 +304,7 @@ a:hover {
     text-align: center;
     margin-top: 30px;
     font-size: 3.2rem;
-    color: #000000;
+    color: var(--text-color);
 }
 .about-introduction {
 }
@@ -323,4 +326,81 @@ a:hover {
     padding-top: 6px;
     user-select: none;
     display: block;
+}
+/*Loader animation*/
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #065064;
+    opacity: 0.5;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+.hideLoader {
+    display: none;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
 }

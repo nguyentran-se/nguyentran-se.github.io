@@ -106,3 +106,16 @@ navRightItem.onclick = (e) => {
     });
     // localStorage.setItem("activeItem", "nothing");
 };
+
+/*Hide loader */
+function hideLoader() {
+    loaderElement = document.querySelector(".loader-wrapper");
+    loaderElement.classList.remove("hideLoader");
+    window.onload = function () {
+        loaderElement.classList.add("hideLoader");
+    };
+    // setTimeout(() => {
+    //     loaderElement.classList.add("hideLoader");
+    // }, 1000);
+}
+hideLoader();
