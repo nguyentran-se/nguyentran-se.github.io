@@ -110,12 +110,15 @@ navRightItem.onclick = (e) => {
 /*Hide loader */
 function hideLoader() {
     loaderElement = document.querySelector(".loader-wrapper");
-    loaderElement.classList.remove("hideLoader");
     window.onload = function () {
-        loaderElement.classList.add("hideLoader");
+        // loaderElement.classList.add("hideLoader");
+        setTimeout(() => {
+            loaderElement.style.display = "none";
+        }, 1000);
     };
     // setTimeout(() => {
     //     loaderElement.classList.add("hideLoader");
-    // }, 1000);
+    //     loaderElement.style.display = "none";
+    // }, 1500);
 }
 hideLoader();
