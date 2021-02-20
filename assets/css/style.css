@@ -306,8 +306,6 @@ a:hover {
     font-size: 3.2rem;
     color: var(--text-color);
 }
-.about-introduction {
-}
 
 /* footer */
 .footer {
@@ -347,6 +345,7 @@ a:hover {
     position: relative;
     border: 4px solid #fff;
     animation: loader 2s infinite ease;
+    -webkit-animation: loader 2s infinite ease;
 }
 
 .loader-inner {
@@ -355,6 +354,7 @@ a:hover {
     width: 100%;
     background-color: #fff;
     animation: loader-inner 2s infinite ease-in;
+    -webkit-animation: loader 2s infinite ease;
 }
 
 .hideLoader {
