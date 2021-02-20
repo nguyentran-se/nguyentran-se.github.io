@@ -1,12 +1,16 @@
 // dark mode
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-toggleSwitch.addEventListener("change", (e) => {
+toggleSwitch.addEventListener("change", function (e) {
     if (e.target.checked) {
         document.body.classList.add("darkMode");
+        document.body.classList.remove("lightMode");
         localStorage.setItem("theme", "darkMode");
+        modeBtn.innerHTML = "Light";
     } else {
         document.body.classList.remove("darkMode");
-        localStorage.setItem("theme", "nothing");
+        document.body.classList.add("lightMode");
+        localStorage.setItem("theme", "lightMode");
+        modeBtn.innerHTML = "Dark";
     }
 });
 const currentTheme = localStorage.getItem("theme");
@@ -36,11 +40,20 @@ const modeBtn = document.querySelector(".change-theme");
 modeBtn.addEventListener("click", () => {
     document.body.classList.toggle("darkMode");
     if (document.body.classList.contains("darkMode")) {
+        localStorage.setItem("theme", "darkMode");
+        document.body.classList.remove("lightMode");
         modeBtn.innerHTML = "Light";
+        toggleSwitch.checked = true;
     } else {
+        localStorage.setItem("theme", "lightMode");
+        document.body.classList.add("lightMode");
         modeBtn.innerHTML = "Dark";
+        toggleSwitch.checked = false;
     }
 });
+const currentMobileTheme = localStorage.getItem("theme");
+if (currentMobileTheme === "darkMode") modeBtn.innerHTML = "Light";
+else modeBtn.innerHTML = "Dark";
 // **active nav-item color**
 const liItemRights = document.getElementsByClassName("header__navbar-item");
 liItemsRightArr = Array.from(liItemRights);

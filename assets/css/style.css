@@ -143,6 +143,28 @@ a:hover {
     --white-color: #292c35;
     --text-color: #a9a9b3;
     --active-color: #065064;
+    animation: fadeIn linear 0.3s;
+    -webkit-animation: fadeIn linear 0.3s;
+}
+.lightMode {
+    animation: fadeOut ease-out 0.3s;
+    -webkit-animation: fadeOut ease-out 0.3s;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .darkMode a:hover {
@@ -157,7 +179,7 @@ a:hover {
     background-color: white;
 }
 .darkMode .nav-mobile {
-    background-color: #053c4b;
+    background-color: #322d42;
 }
 
 .darkMode .change-theme:hover,
@@ -178,10 +200,12 @@ a:hover {
     bottom: 0;
     width: 75%;
     max-width: 100%;
-    background-color: #9ad8e7;
+    background-color: #88c2d1;
     transform: translateX(-100%);
     transition: transform linear 0.3s;
     display: none;
+    z-index: 100;
+    opacity: 0.9;
 }
 
 .nav-list {
