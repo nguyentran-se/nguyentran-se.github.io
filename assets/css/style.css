@@ -424,6 +424,7 @@ a:hover {
     font-size: 2.4rem;
     user-select: none;
     margin-top: 80px;
+    position: relative;
 }
 
 .contact-info a {
@@ -437,6 +438,7 @@ a:hover {
 .contact-info i:hover {
     /* color: var(--primary-color); */
     color: #00b894;
+    user-select: unset;
 }
 .contact-icon-mail {
     color: #e17055;
@@ -448,4 +450,43 @@ a:hover {
 
 .contact-icon-in {
     color: #0a66c2;
+}
+
+.mail-contact {
+    display: inline-block;
+}
+.contact-icon-mail:hover .mail-address {
+    color: var(--text-color);
+}
+.contact-icon-mail {
+    position: relative;
+    alt: "Test";
+}
+.mail-address {
+    border: solid 2px #00b894;
+    width: 220px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 31px;
+    left: -108px;
+    border-radius: 6px;
+    text-align: center;
+    color: var(--text-color);
+    display: none;
+    animation: fadeIn linear 1s;
+    height: 26px;
+    z-index: 100;
+    cursor: auto;
+}
+.mail-address.open {
+    display: block;
+}
+.mail-address::after {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    left: 50%;
+    top: 24px;
+    border-color: #00b894 transparent transparent transparent;
 }

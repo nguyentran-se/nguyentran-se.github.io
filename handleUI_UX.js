@@ -122,3 +122,15 @@ function hideLoader() {
     // }, 1500);
 }
 hideLoader();
+/*Contact Ion handle */
+var mailIcon = document.querySelector(".contact-icon-mail");
+var addressMailBox = document.querySelector(".mail-address");
+mailIcon.addEventListener("click", () => {
+    addressMailBox.classList.add("open");
+    if (addressMailBox.classList.contains("open")) {
+        var doc = document.documentElement;
+        doc.onmousedown = () => {
+            addressMailBox.classList.remove("open");
+        };
+    }
+});
