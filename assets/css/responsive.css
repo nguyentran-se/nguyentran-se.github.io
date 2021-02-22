@@ -11,6 +11,10 @@
     .header__navbar-left a:after {
         bottom: -4px;
     }
+    .content {
+        width: 100%;
+        margin: auto;
+    }
 }
 /* tablet */
 @media (max-width: 63.9375em) and (min-width: 46.25em) {

@@ -299,6 +299,11 @@ a:hover {
     color: var(--text-color);
 }
 
+.content {
+    width: 60%;
+    margin: auto;
+}
+
 /* about page */
 .topic {
     text-align: center;
