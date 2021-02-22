@@ -414,3 +414,38 @@ a:hover {
         height: 0%;
     }
 }
+.highlightText {
+    font-style: italic;
+    color: var(--primary-color);
+}
+/* contact */
+.contact-info {
+    text-align: center;
+    font-size: 2.4rem;
+    user-select: none;
+    margin-top: 80px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: unset;
+}
+
+.contact-info i {
+    margin: 0 6px;
+}
+.contact-info i:hover {
+    /* color: var(--primary-color); */
+    color: #00b894;
+}
+.contact-icon-mail {
+    color: #e17055;
+    cursor: pointer;
+}
+.contact-icon-fb {
+    color: #385898;
+}
+
+.contact-icon-in {
+    color: #0a66c2;
+}
