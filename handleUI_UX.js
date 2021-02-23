@@ -99,7 +99,6 @@ handleActiveColor();
 // }
 
 let navRightItem = document.querySelector(".header__navbar-left");
-// console.log(navRightItem);
 navRightItem.onclick = (e) => {
     liItemsRightArr.forEach((item) => {
         item.classList.remove("active");
@@ -122,15 +121,33 @@ function hideLoader() {
     // }, 1500);
 }
 hideLoader();
-/*Contact Ion handle */
+/*Contact Icon handle */
 var mailIcon = document.querySelector(".contact-icon-mail");
-var addressMailBox = document.querySelector(".mail-address");
+var addressWrapMailBox = document.querySelector(".wrap-mail-address");
+var valueAddressBox = document.querySelector(".mail-address");
+var btnCopy = document.querySelector("#btn-copy");
 mailIcon.addEventListener("click", () => {
-    addressMailBox.classList.add("open");
-    if (addressMailBox.classList.contains("open")) {
+    addressWrapMailBox.classList.add("open");
+    btnCopy.classList.add("open");
+    if (addressWrapMailBox.classList.contains("open")) {
         var doc = document.documentElement;
-        doc.onmousedown = () => {
-            addressMailBox.classList.remove("open");
+        doc.onmousedown = (e) => {
+            // Nếu target là btn-copy thì huỷ
+            if (e.target.id == "btn-copy") return;
+            addressWrapMailBox.classList.remove("open");
+            btnCopy.classList.remove("open");
         };
     }
 });
+// mail address box
+btnCopy.addEventListener("click", copyMailAddress);
+function copyMailAddress() {
+    valueAddressBox.select();
+    valueAddressBox.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    var snackbar = document.getElementById("snackbar");
+    snackbar.className = "show";
+    setTimeout(() => {
+        snackbar.className = snackbar.className.replace("show", "");
+    }, 2000);
+}

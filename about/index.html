@@ -104,12 +104,16 @@
                         <span>Time log: 2/22/2021. Have a nice day!</span>
 
 
-                        <!-- <span><br>Làm các funtion sau: Tạo nút copy text, đổi mail icon thành button copy</span> -->
 
                         <div class="contact-info">
+                            <div id="snackbar">Copy được rồi ó &#128525;</div>
                             <div title="tui's Email" class="mail-contact">
                                 <i class="contact-icon-mail fas fa-envelope">
-                                    <span class="mail-address">nguyentranfw@gmail.com</span>
+                                    <div class="wrap-mail-address">
+                                        <input spellcheck="false" class="mail-address" value="nguyentranfw@gmail.com"
+                                            readonly></input>
+                                    </div>
+                                    <button id='btn-copy'>Copy</button>
                                 </i>
                             </div>
                             <a class="fb-icon" title="tui's Facebook" target="_blank"
