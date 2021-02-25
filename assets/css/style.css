@@ -6,8 +6,8 @@ body {
     background-color: var(--white-color);
 }
 .peppers-blog {
-    min-height: 100vh;
     position: relative;
+    min-height: 100%;
 }
 .loader-wrapper {
     background-color: #065064;
@@ -293,10 +293,14 @@ a:hover {
 }
 /* body */
 .container {
-    padding-bottom: 4rem;
     font-size: 1.6rem;
     line-height: 24px;
     color: var(--text-color);
+    min-height: 100vh;
+}
+.blog-container {
+    min-height: 0;
+    overflow-y: hidden;
 }
 
 .content {
@@ -310,19 +314,56 @@ a:hover {
     margin-top: 30px;
     font-size: 3.2rem;
     color: var(--text-color);
+    display: block;
 }
 
+.archive-table {
+    text-align: center;
+    margin-top: 60px;
+}
+#year {
+    font-size: 28px;
+    font-weight: 500;
+}
+#month {
+    margin-top: 36px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.wrap-item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 100px;
+    align-items: flex-start;
+}
+.archive-item {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-left: 8px;
+}
+#day {
+    margin-right: 100px;
+}
+.archive-item-link {
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-block;
+}
 /* footer */
 .footer {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
+    margin-top: 60px;
     font-size: 1.4rem;
     color: var(--text-color);
     text-align: center;
     height: 4rem;
     width: 100%;
 }
-
+.footer-about {
+    margin-top: 0;
+}
 .copyright {
     width: 100%;
     margin: auto;
@@ -423,8 +464,11 @@ a:hover {
     text-align: center;
     font-size: 2.4rem;
     user-select: none;
-    margin-top: 80px;
+    margin-top: 50px;
     position: relative;
+    padding-top: 34px;
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 
 .contact-info a {
