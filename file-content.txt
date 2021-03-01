@@ -1,0 +1,34 @@
+#tao file
+File file = new File("path")
+file.createNewFile();
+#doc file
+Scanner reader = new Scanner(file);
+	while(reader.hasNext()){
+                System.out.print(reader.next() + " ");
+        }
+Hoac 
+FileReader
+BufferReader
+#write file
+FileWriter
+BufferedWriter 
+PrintWriter pw; pw.....
+pw.write
+
+
+REgular
+w: word -> chu hoac so'
+? 0 1
+* 0 nhieu
++ 1 nhieu
+[abc] a || b ||c
+()
+
+
+String split:
+string.split("(?<=-)"): sẽ lấy luôn dấu - qua bên left
+string.split("(?=-)"): - bên right
+tham số thứ 2 của split sẽ giới hạn số phần tử của array
+
+substring(0, index) -> String 0 -> index - 1
+1 tham so -> vi tri bat dau la index

@@ -1,0 +1,13 @@
+1. căn chính giữa bằng cha có height+ flex con margin auto
+"Setting the margin property on a flex child will 
+push the child away from that direction. 
+Set margin-left to auto, the child will push right. 
+\Set margin-top to auto and the child will 
+push to the bottom."
+
+
+
+
+2.  custom button for all tag div - a - button
+    1. ko dùng width -> min width
+    2. padding

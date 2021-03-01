@@ -1,0 +1,7 @@
+Ghi File
+FileWriter
+BufferedWriter 
+PrintWriter pw; pw.....
+Doc File
+Scanner(file)
+sc...
