@@ -8,6 +8,8 @@ body {
 .peppers-blog {
     position: relative;
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .loader-wrapper {
     background-color: #065064;
@@ -296,11 +298,12 @@ a:hover {
     font-size: 1.6rem;
     line-height: 24px;
     color: var(--text-color);
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    flex: 1 0 auto;
 }
 .blog-container {
-    min-height: 0;
-    overflow-y: hidden;
+    /* min-height: 0;
+    overflow-y: hidden; */
 }
 
 .content {
@@ -355,12 +358,13 @@ a:hover {
 .footer {
     /* position: absolute;
     bottom: 0; */
-    margin-top: 60px;
     font-size: 1.4rem;
     color: var(--text-color);
     text-align: center;
     height: 4rem;
     width: 100%;
+    margin-top: 60px;
+    flex-shrink: 0;
 }
 .footer-about {
     margin-top: 0;
@@ -551,15 +555,19 @@ a:hover {
     border-radius: 45px;
     cursor: pointer;
     color: #fff;
-    background-color: var(--white-color);
-    border: solid 2px #00b894;
     outline: none;
     text-align: center;
     font-size: 500;
-    background-color: #00b894;
-    box-shadow: 0px 2px 2px rgba(46, 229, 157, 0.1);
     display: none;
     transition: opacity 0.2s ease;
+    /* box-shadow: 0px 2px 2px rgba(46, 229, 157, 0.1); */
+    /* border: solid 2px #00b894;
+    background-color: var(--white-color);
+    background-color: #00b894; */
+    background-image: linear-gradient(to right bottom, #00b894, #68ecac);
+    box-shadow: 0 0 10px 0 rgba(104, 236, 172, 0.226);
+    border: solid 2px #00b894;
+    /* border: 0; */
 }
 #btn-copy:hover {
     opacity: 0.8;

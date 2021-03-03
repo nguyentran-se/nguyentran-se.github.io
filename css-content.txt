@@ -11,3 +11,7 @@ push to the bottom."
 2.  custom button for all tag div - a - button
     1. ko dùng width -> min width
     2. padding
+
+
+3. animation-fill mode: 
+    - forward: return value của animation cho nó luôn 
