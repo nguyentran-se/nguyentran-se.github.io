@@ -15,3 +15,6 @@ push to the bottom."
 
 3. animation-fill mode: 
     - forward: return value của animation cho nó luôn 
+
+3. display flex; justify-content: center; align-items: stretch
+ -> cho height cac object = nhau

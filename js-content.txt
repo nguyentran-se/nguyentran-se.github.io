@@ -1,0 +1,19 @@
+*****
+Diff btw target vs currentTarget
+target -> chỉ ra thằng đang click
+currentTarget -> ko nhất thiết phải ra chỉ ra thằng đang click,
+mà là thằng đăng kí event
+1. với các div lồng nhau: 
+vd: div1
+	div2
+	    div3
+when clicking div3
+div3 target vs current = 3;
+div2 target = 3, currentTarget = 2
+
+*****
+1. destructuring -> lấy value của array, obj
+2. spread: bỏ cặp ngoặc -> truyền vào khi gọi function
+	copy-update array, object
+3. rest: còn lại của array -> param khi define function
+4. tính bất biến;

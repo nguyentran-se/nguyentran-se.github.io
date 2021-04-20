@@ -5,3 +5,14 @@ PrintWriter pw; pw.....
 Doc File
 Scanner(file)
 sc...
+
+*change local branch master -> main
+	git push origin master:main
+
+	git branch -m master main
+
+*This will tell git you want to start ignoring the changes to the file
+	git update-index --assume-unchanged path/to/file
+
+When you want to start keeping track again
+	git update-index --no-assume-unchanged path/to/file
