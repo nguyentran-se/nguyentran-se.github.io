@@ -16,3 +16,16 @@ sc...
 
 When you want to start keeping track again
 	git update-index --no-assume-unchanged path/to/file
+
+*git ignore
+dir > .gitignore
+*undo add
+git rm --cached
+
+* remove directory on remote
+git rm -r one-of-the-directories
+git commit . -m "Remove"
+git push origin
+
+*Remove directory from git but NOT local
+git rm -r --cached myFolder
