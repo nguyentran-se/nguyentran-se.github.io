@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const GITHUB_URL = "https://github.com/nguyentran-se";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Welcome To Peppers Blog",
+  title: "Peppers",
   tagline: "A Passionate Front End Engineer",
   url: "https://nguyentran-se.github.io",
   baseUrl: "/",
@@ -16,17 +16,6 @@ const config = {
   organizationName: "nguyentran-se", // Usually your GitHub org/user name.
   projectName: "nguyentran-se.github.io", // Usually your repo name.
   trailingSlash: false,
-  plugins: [
-    // [
-    // "content-blog",
-    // {
-    //   path: "blog",
-    //   routeBasePath: "blog",
-    //   include: ["*.md", "*.mdx"],
-    //   // ...
-    // },
-    // ],
-  ],
   presets: [
     [
       "classic",
@@ -34,16 +23,23 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          path: "coding",
+          routeBasePath: "coding",
+          include: ["**/*.{md,mdx}"],
+          breadcrumbs: true,
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/nguyentran-se/nguyentran-se.github.io/tree/main/",
         },
         blog: {
           showReadingTime: true,
           postsPerPage: 3,
-          // Please change this to your repo.
+          feedOptions: {
+            type: "all",
+            copyright: `Copyright © ${new Date().getFullYear()} Peppers.`,
+          },
+          // blogSidebarTitle: '',
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/nguyentran-se/nguyentran-se.github.io/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -52,28 +48,66 @@ const config = {
     ],
   ],
 
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "vi"],
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      hideableSidebar: true,
+      autoCollapseSidebarCategories: true,
+      image: "img/peppers-og.png",
       navbar: {
         title: "Peppers",
+        hideOnScroll: true,
         logo: {
-          alt: "My Site Logo",
+          alt: "Peppers Logo",
           src: "img/peppers.png",
         },
         items: [
           {
-            // type: "doc",
-            // docId: "intro",
-            to: "/coding",
+            type: "search",
+            position: "right",
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
+            dropdownItemsAfter: [
+              {
+                to: "https://github.com/nguyentran-se/",
+                label: "Help me translate",
+              },
+            ],
+          },
+          {
+            type: "doc",
+            docId: "intro",
             position: "right",
             label: "Coding",
           },
           { to: "/blog", label: "Blog", position: "right" },
           {
-            href: GITHUB_URL,
-            label: "GitHub",
+            type: "dropdown",
+            label: "Me",
             position: "right",
+            items: [
+              {
+                label: "Showroom",
+                to: "/showroom",
+              },
+              {
+                label: "About me",
+                to: "/about-me",
+              },
+            ],
+          },
+          {
+            href: GITHUB_URL,
+            label: " ",
+            position: "right",
+            className: "navbar-icon-gh",
           },
         ],
       },
@@ -127,8 +161,17 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Peppers. Built with Docusaurus.`,
       },
       prism: {
+        defaultLanguage: "typescript",
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      announcementBar: {
+        id: "peppers",
+        content:
+          'Peppers - Blog Sharing Site. Contact for work <a target="_blank" rel="noopener noreferrer" href="https://github.com/nguyentran-se">here</a>!',
+        backgroundColor: "var(--ifm-color-primary-dark)",
+        textColor: "var(--ifm-font-color-base-inverse)",
+        isCloseable: true,
       },
     }),
 };
