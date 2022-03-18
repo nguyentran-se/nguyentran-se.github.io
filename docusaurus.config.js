@@ -15,7 +15,7 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "nguyentran-se", // Usually your GitHub org/user name.
   projectName: "nguyentran-se.github.io", // Usually your repo name.
-  deploymentBranch: "main",
+  trailingSlash: false,
   plugins: [
     // [
     // "content-blog",
