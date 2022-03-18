@@ -82,8 +82,6 @@ const config = {
           // ],
           // },
           {
-            type: "doc",
-            docId: "intro",
             position: "right",
             label: "Coding",
           },
