@@ -8,13 +8,14 @@ const GITHUB_URL = "https://github.com/nguyentran-se";
 const config = {
   title: "Welcome To Peppers Blog",
   tagline: "A Passionate Front End Engineer",
-  url: GITHUB_URL,
+  url: "https://nguyentran-se.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "nguyentran-se", // Usually your GitHub org/user name.
-  projectName: "nguyentran.github.io", // Usually your repo name.
+  projectName: "nguyentran-se.github.io", // Usually your repo name.
+  deploymentBranch: "main",
   plugins: [
     // [
     // "content-blog",
