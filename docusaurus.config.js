@@ -71,16 +71,16 @@ const config = {
           //   type: "search",
           //   position: "right",
           // },
-          // {
-          //   type: "localeDropdown",
-          //   position: "right",
-          // dropdownItemsAfter: [
-          //   {
-          //     to: "https://github.com/nguyentran-se/",
-          //     label: "Help me translate",
-          //   },
-          // ],
-          // },
+          {
+            type: "localeDropdown",
+            position: "right",
+            // dropdownItemsAfter: [
+            //   {
+            //     to: "https://github.com/nguyentran-se/",
+            //     label: "Help me translate",
+            //   },
+            // ],
+          },
           {
             type: "doc",
             docId: "intro",

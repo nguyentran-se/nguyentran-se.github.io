@@ -1,0 +1,74 @@
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+ .toggle {
+  --toggle-width: 50px;
+  --toggle-height: 24px;
+  --thumb-width: 22px;
+  position: relative;
+  background-color: #4d4d4d;
+  border-radius: 30px;
+  transition: .2s;
+  height: var(--toggle-height);
+  width: var(--toggle-width);
+}
+
+.toggleScreenReader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.toggleDisabled {
+  cursor: not-allowed;
+}
+
+.toggleButton {
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.toggleIcon{
+  transition: all .2s linear;
+}
+.toggleButton:hover {
+  background-color: #00000010;
+}
+
+[data-theme='dark'] .toggleButton:hover {
+  background-color: #ffffff20;
+}
+
+[data-theme='light'] .darkToggleIcon,
+[data-theme='dark'] .lightToggleIcon {
+  visibility: hidden;
+}
+
+.toggleTrackThumb {
+  background-color: #fafafa;
+  border: 1px solid #4d4d4d;
+  border-radius: 50%;
+  height: 22px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  transition: .25s;
+  width: var(--thumb-width);
+}
+.toggleScreenReader:checked ~ .toggleTrackThumb{
+  left: calc(var(--toggle-width) - var(--thumb-width) - 1px);
+}
