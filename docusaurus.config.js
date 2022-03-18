@@ -48,10 +48,10 @@ const config = {
     ],
   ],
 
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "vi"],
-  },
+  // i18n: {
+  //   defaultLocale: "en",
+  //   locales: ["en", "vi"],
+  // },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -67,19 +67,19 @@ const config = {
           src: "img/peppers.png",
         },
         items: [
-          {
-            type: "search",
-            position: "right",
-          },
+          // {
+          //   type: "search",
+          //   position: "right",
+          // },
           {
             type: "localeDropdown",
             position: "right",
-            dropdownItemsAfter: [
-              {
-                to: "https://github.com/nguyentran-se/",
-                label: "Help me translate",
-              },
-            ],
+            // dropdownItemsAfter: [
+            //   {
+            //     to: "https://github.com/nguyentran-se/",
+            //     label: "Help me translate",
+            //   },
+            // ],
           },
           {
             type: "doc",
