@@ -10,7 +10,7 @@ const config = {
   tagline: "A Passionate Front End Engineer",
   url: "https://nguyentran-se.github.io",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "nguyentran-se", // Usually your GitHub org/user name.
