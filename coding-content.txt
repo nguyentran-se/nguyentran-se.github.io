@@ -10,6 +10,7 @@ sc...
 	git push origin master:main
 
 	git branch -m master main
+	git branch -m main
 
 *This will tell git you want to start ignoring the changes to the file
 	git update-index --assume-unchanged path/to/file
@@ -29,3 +30,14 @@ git push origin
 
 *Remove directory from git but NOT local
 git rm -r --cached myFolder
+git rm myFile --cached
+* change remote 
+git remote show origin
+git remote set-url origin yourUrl
+* version commit
+git checkout c5f567 -- file1/to/restore
+
+* add cùng chung 1 commit trước, cái này là chưa push nha
+git commit --amend -a
+--amend: theo commit cũ
+-a: thay vì git add .

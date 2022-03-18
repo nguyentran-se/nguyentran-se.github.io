@@ -16,5 +16,20 @@ push to the bottom."
 3. animation-fill mode: 
     - forward: return value của animation cho nó luôn 
 
-3. display flex; justify-content: center; align-items: stretch
+4. display flex; justify-content: center; align-items: stretch
  -> cho height cac object = nhau
+5. clearfix:after -> Là để adjustify lại height || width
+của cha với phần con bị float
+
+6. margin-collapsing 
+a) 2 div trên dưới: thì sẽ theo thằng nào margin lớn hơn. chỉ với
+top và bot, left vs right ko bị
+b) 2 div cha con(first va last): nếu cả 2 cùng margin thì sẽ theo thằng lớn hơn
+https://www.smashingmagazine.com/2019/07/margins-in-css/#adjacent-siblings
+
+solve: overflow: hidden, display: flow-root
+7. mặc đinh là flex: 0 1 auto, nên based(height): auto, khi set overflow
+thì height changed
+8. Thêm flex vào wrapper của <i></i> để căn giữa đc icon
+i là inline => flex vô sẽ mất đi inline => fixed height => căn giữa đc i
+9. width + maxwidth: để ko fix cứng

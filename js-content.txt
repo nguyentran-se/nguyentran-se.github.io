@@ -2,7 +2,7 @@
 Diff btw target vs currentTarget
 target -> chỉ ra thằng đang click
 currentTarget -> ko nhất thiết phải ra chỉ ra thằng đang click,
-mà là thằng đăng kí event
+mà là thằng đăng kí event = this
 1. với các div lồng nhau: 
 vd: div1
 	div2
