@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpeppers=self.webpackChunkpeppers||[]).push([[287],{9667:function(e,r,t){t.r(r);var n=t(2773),o=t(7294);r.default=function(){return o.createElement(n.Z,{title:"Showroom",description:"Peppers - Showroom."},o.createElement("main",null,o.createElement("h3",null,"My Showroom Project"),";"))}}}]);

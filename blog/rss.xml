@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Welcome To Peppers Blog Blog</title>
+        <title>Peppers Blog</title>
         <link>https://nguyentran-se.github.io/blog</link>
-        <description>Welcome To Peppers Blog Blog</description>
+        <description>Peppers Blog</description>
         <lastBuildDate>Thu, 26 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>Copyright © 2022 Peppers.</copyright>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://nguyentran-se.github.io/blog/welcome</link>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nguyentran-se.github.io/blog</id>
-    <title>Welcome To Peppers Blog Blog</title>
+    <title>Peppers Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://nguyentran-se.github.io/blog"/>
-    <subtitle>Welcome To Peppers Blog Blog</subtitle>
+    <subtitle>Peppers Blog</subtitle>
     <icon>https://nguyentran-se.github.io/img/favicon.ico</icon>
+    <rights>Copyright © 2022 Peppers.</rights>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
